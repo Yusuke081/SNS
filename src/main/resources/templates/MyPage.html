@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-epuiv="content-type" charset="UTF-8">
+<title>MyPage</title>
+</head>
+<body>
+    <table>
+     <form method="POST" action="/MyPage/" th:object="${userData}">
+        <input type="hidden" name="id" th:value="*{id}">
+        <tr><td><label>名前</label></td>
+        <td><input type="text" name="name" th:value="*{name}"></td></tr>
+        <tr><td><label>パスワード</label></td>
+        <td><input type="password" name="pass" th:value="*{pass}"></td></tr>
+        <tr><td><input type="submit" value="更新"></td></tr>
+     
+     </table>
+</body>
+</html>
