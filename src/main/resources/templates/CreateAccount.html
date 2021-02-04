@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>新規登録</h1>
-    <form method="post" th:action="/CreateAccount" th:object="${formModel}">
+    <form method="post" th:action="CreateAccount" th:object="${formModel}">
         <div><label>ユーザー名</label><input type="text" name="name"></div>
         <div><label>メールアドレス</label><input type="text" name="mail"></div>
         <div><label>パスワード</label><input type="password" name="pass"></div>

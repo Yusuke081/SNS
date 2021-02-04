@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface TweetDataRepository extends
 JpaRepository<TweetData, Long>{
 	
-public List<TweetData> findByIdIsNotNullOrderByIdDesc();
-public List<TweetData> findByIdNot(long id);
+//public List<TweetData> findByIdIsNotNullOrderByIdDesc();
+//public List<TweetData> findByIdNot(long id);
 
 }
 

@@ -6,7 +6,7 @@
 </head>
 <body>
     <table>
-     <form method="POST" action="/MyPage/" th:object="${userData}">
+     <form method="POST" action="MyPage/" th:object="${userData}">
         <input type="hidden" name="id" th:value="*{id}">
         <tr><td><label>名前</label></td>
         <td><input type="text" name="name" th:value="*{name}"></td></tr>

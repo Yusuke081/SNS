@@ -29,7 +29,6 @@ public class TweetData {
 	
 	
 	@ManyToOne
-	@JoinColumn(name="userId")
 	private UserData userData;
     public UserData getUserData() {return userData;}
     public void setUserData(UserData userData) {this.userData = userData;}
