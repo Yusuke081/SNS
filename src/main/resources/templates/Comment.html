@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-epuiv="content-type" charset="UTF-8">
+<title>PostTweet</title>
+</head>
+<body>
+    <h1>Tweet</h1>
+	<div th:each="u:${userData}" >
+	<div th:each="t:${tweetData}">
+	<p th:text="${u.name}"></p><!-- </div> -->
+	<!-- <div th:each="t:${tweetData}" > -->
+	<p th:text="${t.time}"></p>        
+	<p th:text="${t.comment}"></p>
+	</div>
+	</div>
+</body>
+</html>

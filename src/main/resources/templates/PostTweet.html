@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-epuiv="content-type" charset="UTF-8">
 <title>PostTweet</title>
 </head>
 <body>
    <h1>Tweet</h1>
-    <form method="post" action="PostTweet/" th:object="${formModel}">
+    <!-- <p th:each="T:${TweetData}"><span th:text="${tweetData.userData.name}">名前</span>: 
+    <span th:text="${tweet.text}">テキスト</span></p> -->
+    
+   <!--  <form method="POST" action="/postTweet" th:object="${formModel}">
+        <div><label>tweet</label><input type="text" name="tweet"></div>      
+        <div><input type="submit" value="submit"></div>
+    </form> -->
+    <form method="POST" action="/postTweet" th:object="${formModel}">
         <div><label>tweet</label><input type="text" name="tweet"></div>
-        
         <div><input type="submit" value="submit"></div>
     </form>
+    
+    
+    <!-- <table>
+         <tr><th>日時</th><th>名前</th><th>コメント</th></tr>
+         <tr th:each="t:${TweetData}">
+         <td th:text="${t.time}"></td>
+         <td th:text="${t.id}"></td>
+         <td th:text="${t.comment}"></td>
+         </tr>
+    </table> -->
+    
 </body>
 </html>

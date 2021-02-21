@@ -6,12 +6,16 @@
 </head>
 <body>
 	<h1>新規登録</h1>
+    <div th:if="${errorList}" th:each="error : ${errorList}">
+    	<p th:text = "${error}"></p>
+    </div>
     <form method="post" th:action="CreateAccount" th:object="${formModel}">
         <div><label>ユーザー名</label><input type="text" name="name"></div>
         <div><label>メールアドレス</label><input type="text" name="mail"></div>
         <div><label>パスワード</label><input type="password" name="pass"></div>
         
         <div><input type="submit" value="登録"></div>
+<!--      <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" th:errorclass="err"> -->
     </form>
 </body>
 </html>
